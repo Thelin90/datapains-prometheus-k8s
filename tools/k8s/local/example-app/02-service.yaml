@@ -11,3 +11,4 @@ spec:
   ports:
   - name: metrics
     port: 8000
+    targetPort: 9090

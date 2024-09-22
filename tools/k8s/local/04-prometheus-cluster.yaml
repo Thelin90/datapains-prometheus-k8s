@@ -2,13 +2,34 @@ apiVersion: monitoring.coreos.com/v1
 kind: Prometheus
 metadata:
   name: prometheus
-  namespace: monitoring
 spec:
-  serviceAccountName: prometheus
-  serviceMonitorSelector:
-    matchLabels:
-      team: dataops
+  baseImage: quay.io/prometheus/prometheus
+  logLevel: info
+  podMetadata:
+    annotations:
+      cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+    labels:
+      app: prometheus
+  replicas: 1
   resources:
     requests:
+      cpu: 1
       memory: 400Mi
-  enableAdminAPI: false
+  retention: 12h
+  serviceAccountName: prometheus-service-account
+  serviceMonitorSelector:
+    matchLabels:
+      serviceMonitorSelector: prometheus
+  storage:
+    volumeClaimTemplate:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      metadata:
+        name: prometheus-pvc
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
+  version: v2.10.0
