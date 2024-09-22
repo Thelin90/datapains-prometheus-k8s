@@ -4,10 +4,12 @@ metadata:
   name: random-integer
   namespace: monitoring
   labels:
-    app: dataops
+    app: random-integer
 spec:
   selector:
     app: random-integer
   ports:
-  - name: metrics
-    port: 8000
+    - name: metrics
+      port: 9102
+      targetPort: 8000
+      protocol: TCP
