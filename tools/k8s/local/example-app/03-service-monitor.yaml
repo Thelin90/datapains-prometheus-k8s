@@ -2,7 +2,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: dataops-app
-  namespace: monitoring
+  namespace: prometheus
   labels:
     team: dataops
 spec:
