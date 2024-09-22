@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dataops-app
-  namespace: dataops-example
+  namespace: dataops
 spec:
   replicas: 3
   selector:
