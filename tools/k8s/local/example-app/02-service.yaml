@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: random-integer
-  namespace: dataops
+  namespace: monitoring
   labels:
     app: dataops
 spec:
