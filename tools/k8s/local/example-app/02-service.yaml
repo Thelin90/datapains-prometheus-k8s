@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: dataops-app
+  namespace: dataops
+  labels:
+    app: dataops
+spec:
+  selector:
+    app: dataops-app
+  ports:
+  - name: web
+    port: 8080
