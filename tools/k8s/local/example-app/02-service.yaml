@@ -9,5 +9,5 @@ spec:
   selector:
     app: dataops-app
   ports:
-  - name: web
-    port: 8080
+  - name: metrics
+    port: 8000

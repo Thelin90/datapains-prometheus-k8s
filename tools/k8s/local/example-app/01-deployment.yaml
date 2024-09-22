@@ -4,7 +4,7 @@ metadata:
   name: dataops-app
   namespace: dataops
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: dataops
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: dataops-app
-        image: quay.io/brancz/prometheus-example-app:v0.5.0
+        image: 
         ports:
-        - name: web
-          containerPort: 8080
+        - name: metrics
+          containerPort: 8000
