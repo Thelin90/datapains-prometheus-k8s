@@ -4,11 +4,8 @@ metadata:
   name: dataops-app
   namespace: monitoring
   labels:
-    team: dataops
+    app: prometheus
 spec:
-  selector:
-    matchLabels:
-      app: dataops
   endpoints:
-  - port: metrics
+  - port: 8000
     interval: 10s

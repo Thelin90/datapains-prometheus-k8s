@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        app: dataops
+        app: prometheus
     spec:
       containers:
       - name: dataops-app

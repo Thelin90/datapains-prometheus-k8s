@@ -4,7 +4,7 @@ metadata:
   name: dataops-app
   namespace: dataops
   labels:
-    app: dataops
+    app: prometheus
 spec:
   selector:
     app: dataops-app
