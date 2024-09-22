@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
       - name: dataops-app
-        image: 
+        image: datapains/prometheus-example-app:0.0.1
+        imagePullPolicy: Never
         ports:
         - name: metrics
           containerPort: 8000
