@@ -7,11 +7,11 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: dataops-app
+      app: dataops
   template:
     metadata:
       labels:
-        app: dataops-app
+        app: dataops
     spec:
       containers:
       - name: dataops-app
