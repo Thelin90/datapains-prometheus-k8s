@@ -10,5 +10,5 @@ spec:
     matchLabels:
       app: dataops
   endpoints:
-  - port: metrics
+  - port: 8000
     interval: 10s
