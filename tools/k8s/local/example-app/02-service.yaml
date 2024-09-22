@@ -1,14 +1,13 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: dataops-app
+  name: random-integer
   namespace: dataops
   labels:
     app: dataops
 spec:
   selector:
-    app: dataops-app
+    app: random-integer
   ports:
   - name: metrics
     port: 8000
-    targetPort: 9090

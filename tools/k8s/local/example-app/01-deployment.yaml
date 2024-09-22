@@ -1,22 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dataops-app
+  name: random-integer
   namespace: dataops
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dataops
+      app: random-integer
   template:
     metadata:
       labels:
-        app: dataops
+        app: random-integer
     spec:
       containers:
-      - name: dataops-app
+      - name: random-integer
         image: datapains/prometheus-example-app:0.0.1
         imagePullPolicy: Never
         ports:
-        - name: metrics
-          containerPort: 8000
+          - containerPort: 8000
