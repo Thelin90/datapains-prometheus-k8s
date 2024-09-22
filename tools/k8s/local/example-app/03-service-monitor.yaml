@@ -2,10 +2,13 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: dataops-app
-  namespace: monitoring
+  namespace: dataops
   labels:
-    app: prometheus
+    team: dataops
 spec:
+  selector:
+    matchLabels:
+      app: dataops
   endpoints:
-  - port: 8000
+  - port: metrics
     interval: 10s
