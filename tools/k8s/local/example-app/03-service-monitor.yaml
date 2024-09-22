@@ -2,7 +2,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: random-integer-servicemonitor
-  namespace: monitoring
+  namespace: dataops
   labels:
     release: kube-prometheus-stack
 spec:
