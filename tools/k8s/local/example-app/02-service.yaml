@@ -9,7 +9,5 @@ spec:
   selector:
     app: dataops-app
   ports:
-    - name: metrics
-      port: 9102
-      targetPort: 8000
-      protocol: TCP
+  - name: metrics
+    port: 8000
